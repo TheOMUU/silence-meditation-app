@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="account-container">
+
+    <div class="account-card">
+
+        <h2 class="account-title">👤 Account & Privacy</h2>
+
+        <label class="account-label">Change Name</label>
+
+        <input id="newName" class="account-input" placeholder="Enter new name">
+
+        <button class="account-btn" onclick="changeName()">
+            Update Name
+        </button>
+
+        <label class="account-label">Change Password</label>
+
+        <input id="newPassword" type="password" class="account-input" placeholder="Enter new password">
+
+        <button class="account-btn" onclick="changePassword()">
+            Update Password
+        </button>
+
+        <button class="account-back-btn" onclick="changeTab('settings',2)">
+            Back
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

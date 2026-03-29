@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="admin-header">
+    <h1 class="admin-title">
+        <svg class="admin-logo" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3C8 3 5 6 5 10c0 6 7 11 7 11s7-5 7-11c0-4-3-7-7-7z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="10" r="2" fill="currentColor"/>
+        </svg>
+        Silence Admin
+    </h1>
+</header>
+
+<div class="dashboard">
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <p class="stat-label">Total Users</p>
+            <h2 id="totalUsers">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p class="stat-label">Emotion Entries</p>
+            <h2 id="totalEmotions">0</h2>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2>User Management</h2>
+            <button class="primary-btn" onclick="loadUsers()">Refresh</button>
+        </div>
+
+        <table id="userTable"></table>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2>User Activity</h2>
+            <button class="primary-btn" onclick="loadActivity()">Refresh</button>
+        </div>
+
+        <table id="activityTable"></table>
+
+    </div>
+
+
+    <div class="card danger">
+
+        <div class="card-header">
+            <h2>High Risk Users</h2>
+            <button class="primary-btn" onclick="loadHighRisk()">Check</button>
+        </div>
+
+        <table id="riskTable"></table>
+
+    </div>
+
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if (typeof loadStats === "function") loadStats();
+        if (typeof loadUsers === "function") loadUsers();
+        if (typeof loadActivity === "function") loadActivity();
+        if (typeof loadHighRisk === "function") loadHighRisk();
+
+    });
+</script>
+</body>
+
+</html>
+

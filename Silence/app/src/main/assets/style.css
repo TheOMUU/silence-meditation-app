@@ -1,0 +1,4671 @@
+
+/* =====================================================
+SYSTEM FONTS - iOS/Android Native (No internet needed)
+===================================================== */
+
+/* =====================================================
+iOS-STYLE SYSTEM FONTS - Works Offline Everywhere
+===================================================== */
+
+/* Main Title - iOS SF Pro Display equivalent */
+
+body{
+
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"SF Pro Display",
+"SF Pro Text",
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
+}
+
+.home-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 2.2rem !important;
+    letter-spacing: -0.02em !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Subtitle text - iOS SF Pro Text */
+.subtitle-text, .app-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Buttons - iOS SF Pro Medium */
+.primary-btn, .btn, button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* All headings */
+h1, h2, h3, .title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.015em !important;
+}
+
+/* Body text */
+body, p, .text {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/*===GLOBAL RESET
+===================================================== */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+letter-spacing:0.2px;
+
+background:linear-gradient(
+180deg,
+#eef6f4 0%,
+#cfe3dd 35%,
+#a7c8c1 70%,
+#7fa9a1 100%
+);
+
+min-height:100vh;
+
+transition:background .4s ease;
+
+color:#0f172a;
+
+height:100vh;
+overflow-y:auto;
+
+
+-webkit-overflow-scrolling:touch;
+}
+
+/* =====================================================
+APP CONTAINER
+===================================================== */
+
+#app{
+height:100vh;
+overflow-y:auto;
+overscroll-behavior:contain;
+-webkit-overflow-scrolling:touch;
+}
+
+html,body{
+overflow:hidden;
+}
+
+/* =====================================================
+DARK MODE
+===================================================== */
+
+body.dark {
+
+body.dark{
+
+background:linear-gradient(
+180deg,
+#021b1a 0%,
+#042f2e 50%,
+#053c39 100%
+);
+
+}
+
+color:#e5e7eb;
+
+}
+
+/* =====================================================
+AMBIENT BACKGROUND GLOW
+===================================================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-200px;
+left:-200px;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(
+circle,
+rgba(34,197,94,0.25),
+transparent 70%
+);
+
+filter:blur(120px);
+
+z-index:-1;
+
+animation:ambientGlow 12s infinite alternate;
+
+}
+
+@keyframes ambientGlow{
+
+0%{transform:translate(0,0);}
+100%{transform:translate(200px,120px);}
+
+}
+
+/* =====================================================
+SPLASH SCREEN
+===================================================== */
+
+#splash{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#1F4D45;
+}
+
+.logo{
+font-size:42px;
+font-weight:600;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
+
+header{
+font-size:26px;
+font-weight:700;
+text-align:center;
+padding:18px 0;
+color:#0f172a;
+}
+
+body.dark header{
+color:#e2f5ef;
+}
+
+/* =====================================================
+SCREEN TRANSITIONS
+===================================================== */
+
+.screen{
+min-height:100vh;
+display:none;
+opacity:0;
+transform:translateY(25px) scale(.98);
+transition:all .35s cubic-bezier(.4,0,.2,1);
+}
+
+.screen.active{
+display:block;
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+/* =====================================================
+INPUT AREA
+===================================================== */
+
+#problem{
+
+width:90%;
+margin:20px auto;
+
+display:block;
+
+padding:18px;
+
+height:120px;
+
+border:none;
+border-radius:20px;
+
+background:rgba(255,255,255,0.65);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+
+font-size:15px;
+
+outline:none;
+resize:none;
+
+}
+
+/* =====================================================
+PRIMARY BUTTON
+===================================================== */
+
+.primary-btn{
+
+display:block;
+margin:25px auto;
+
+padding:14px 30px;
+
+border:none;
+border-radius:16px;
+
+font-size:16px;
+font-weight:600;
+
+color:white;
+
+background:linear-gradient(135deg,#38bdf8,#6366f1);
+
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+transition:transform .15s ease, box-shadow .15s ease;
+
+}
+
+.primary-btn:active{
+transform:scale(.92);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+MEDITATION CARD
+===================================================== */
+
+/* ==========================================
+   MEDITATION CARDS (APPLE STYLE)
+========================================== */
+
+.meditation-card{
+width:90%;
+margin:20px auto;
+padding:22px;
+
+border-radius:22px;
+
+background:linear-gradient(
+145deg,
+#fff6bf,
+#ffeaa7
+);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.15),
+0 2px 8px rgba(0,0,0,0.08);
+
+transition:all .25s ease;
+}
+
+.meditation-card:hover{
+transform:translateY(-3px);
+box-shadow:
+0 18px 40px rgba(0,0,0,0.2);
+}
+
+body.dark .meditation-card{
+background:rgba(255,255,255,0.06);
+}
+
+/* =====================================================
+BREATHING
+===================================================== */
+
+.breathing-section{
+text-align:center;
+margin-top:20px;
+}
+
+.breathing-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:25px;
+}
+
+.breathing-orb{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:radial-gradient(circle at 30% 30%,#7dd3fc,#0ea5e9);
+
+box-shadow:
+0 0 40px rgba(56,189,248,0.6),
+0 0 80px rgba(56,189,248,0.3),
+inset 0 0 20px rgba(255,255,255,0.3);
+
+transition:transform 4s ease-in-out, box-shadow 4s ease;
+
+}
+
+.breathing-orb.expand{
+
+transform:scale(1.55);
+
+box-shadow:
+0 0 60px rgba(56,189,248,0.8),
+0 0 120px rgba(56,189,248,0.4);
+
+}
+
+.history-item{
+
+background:rgba(255,255,255,0.7);
+
+border-radius:16px;
+
+padding:16px;
+
+margin:12px 20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+}
+
+body.dark .history-item{
+
+background:#163a33;
+
+}
+
+.history-emotion{
+
+font-weight:700;
+margin-bottom:6px;
+
+}
+
+.history-text{
+
+font-size:14px;
+opacity:0.9;
+
+}
+
+.breathing-text{
+
+margin-top:20px;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0f172a; /* dark readable color for light mode */
+
+text-shadow:0 2px 8px rgba(0,0,0,0.08);
+
+letter-spacing:0.5px;
+
+}
+
+body.dark .breathing-text{
+
+color:#e2f5ef;
+
+text-shadow:0 0 10px rgba(34,197,94,0.4);
+
+}
+
+/* =====================================================
+MUSIC SECTION
+===================================================== */
+
+/* Base header style (both modes) */
+.music-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;      /* center text */
+    gap: 10px;
+
+    padding: 20px 24px 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-transform: none;
+}
+
+/* LIGHT MODE */
+body:not(.dark) .music-title {
+    color: #0f172a;                           /* dark navy */
+    text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+}
+
+/* DARK MODE */
+body.dark .music-title {
+    color: #e5f4ff;                           /* soft aqua white */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Icon tint */
+.music-title svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Icon colors per mode */
+body:not(.dark) .music-title svg {
+    stroke: #38bdf8;
+}
+
+body.dark .music-title svg {
+    stroke: #a5b4fc;
+}
+
+
+.music-card{
+
+width:90%;
+margin:18px auto;
+
+padding:22px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,0.65);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.15),
+0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+body.dark .music-card{
+
+background:rgba(15,40,35,0.8);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+
+}
+
+.track-list{
+list-style:none;
+margin-top:10px;
+}
+
+.track-list li{
+
+padding:14px 16px;
+
+margin-bottom:12px;
+
+border-radius:14px;
+
+font-size:15px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.25s;
+
+background:linear-gradient(
+135deg,
+#fde68a,
+#facc15
+);
+
+color:#1e293b;
+
+box-shadow:
+0 6px 14px rgba(0,0,0,0.15);
+
+}
+
+.track-list li:hover{
+
+transform:scale(1.03);
+
+background:linear-gradient(
+135deg,
+#fcd34d,
+#eab308
+);
+
+}
+
+body.dark .track-list li{
+
+background:linear-gradient(
+135deg,
+#fde047,
+#facc15
+);
+
+color:#0f172a;
+
+}
+
+body.dark .track-list li:hover{
+background:rgba(255,255,255,0.1);
+}
+
+/* =====================================================
+NOW PLAYING
+===================================================== */
+
+.now-playing{
+
+font-weight:600;
+font-size:15px;
+
+text-align:center;
+
+margin-bottom:16px;
+
+padding:12px;
+
+border-radius:14px;
+
+background:rgba(0,0,0,0.05);
+
+color:#0f172a;
+
+}
+
+body.dark .now-playing{
+background:rgba(255,255,255,0.06);
+color:#e2f5ef;
+}
+
+/* =====================================================
+PAUSE BUTTON
+===================================================== */
+
+.pause-btn{
+
+margin-top:16px;
+width:100%;
+
+padding:14px;
+
+border:none;
+border-radius:16px;
+
+font-size:15px;
+font-weight:600;
+
+background:linear-gradient(135deg,#1f6f5f,#2f8f7c);
+
+color:white;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.25);
+
+transition:.25s;
+
+}
+
+.pause-btn:active{
+transform:scale(.96);
+}
+
+/* =====================================================
+SETTINGS
+===================================================== */
+
+.settings-header{
+font-weight:600;
+font-size:22px;
+padding:20px;
+}
+
+/* LIGHT */
+
+body:not(.dark) .settings-header{
+color:#1f2937;
+}
+
+/* DARK */
+
+body.dark .settings-header{
+color:#ffffff;
+}
+
+.settings-icon{
+
+width:20px;
+height:20px;
+
+stroke:#0f172a;
+stroke-width:2;
+
+}
+
+body.dark .settings-icon{
+stroke:#e2f5ef;
+}
+
+.settings-title{
+font-size:22px;
+font-weight:700;
+margin:20px;
+color:#0f172a;
+}
+
+body.dark .settings-title{
+color:#e2f5ef;
+}
+
+.settings-card{
+
+background:rgba(255,255,255,0.08);
+
+border-radius:20px;
+
+padding:18px;
+
+margin:16px 20px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.25);
+
+}
+body.dark .settings-card{
+
+background:#163a33;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.6);
+
+}
+
+.settings-btn{
+
+display:flex;
+align-items:center;
+gap:14px;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+background:transparent;
+
+font-size:16px;
+font-weight:600;
+
+color:#1e293b;
+
+cursor:pointer;
+
+}
+
+.settings-btn + .settings-btn{
+margin-top:10px;
+}
+
+.settings-btn:hover{
+background:rgba(255,255,255,0.07);
+box-shadow:0 0 18px rgba(99,102,241,0.3);
+}
+
+
+
+body.dark .settings-btn{
+color:#e6fffb;
+}
+
+body.dark .settings-btn svg{
+stroke:#e6fffb;
+}
+
+/* =====================================================
+THEME SWITCH
+===================================================== */
+
+.theme-row{
+color:#1e293b;
+font-weight:500;
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+padding:18px;
+
+width:100%;
+
+}
+
+.theme-row span{
+min-width:45px;
+text-align:center;
+}
+
+body.dark .theme-row{
+color:#e2f5ef;
+}
+
+.switch{
+position:relative;
+display:inline-block;
+width:50px;
+height:26px;
+}
+
+.switch input{
+opacity:0;
+width:0;
+height:0;
+}
+
+.slider{
+
+position:absolute;
+box-shadow:0 0 12px rgba(99,102,241,0.4);
+
+cursor:pointer;
+
+top:0;
+left:0;
+right:0;
+bottom:0;
+
+background:#0f172a;
+
+border-radius:26px;
+
+transition:.4s;
+
+}
+
+.slider:before{
+
+position:absolute;
+
+content:"";
+
+height:20px;
+width:20px;
+
+left:3px;
+bottom:3px;
+
+background:white;
+
+border-radius:50%;
+
+transition:.4s;
+
+}
+
+input:checked + .slider{
+
+background:#6366f1;
+
+box-shadow:0 0 15px rgba(99,102,241,0.6);
+
+}
+
+input:checked + .slider:before{
+transform:translateX(24px);
+}
+
+/* =====================================================
+AUTH SCREEN
+===================================================== */
+
+/* ==========================================
+   LOGIN / REGISTER UI
+========================================== */
+
+.auth-container{
+
+width:90%;
+max-width:340px;
+
+margin:120px auto;
+
+background:white;
+
+padding:32px;
+
+border-radius:24px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.2);
+
+text-align:center;
+
+animation:fadeUp .6s ease;
+
+}
+
+.auth-title{
+
+font-size:28px;
+
+font-weight:700;
+
+margin-bottom:4px;
+
+}
+
+.auth-subtitle{
+
+font-size:14px;
+
+color:#6b7280;
+
+margin-bottom:20px;
+
+}
+
+.auth-container input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:12px;
+
+border-radius:12px;
+
+border:none;
+
+background:#f3f4f6;
+
+}
+
+.auth-btn{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(
+135deg,
+#38bdf8,
+#6366f1
+);
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:8px;
+
+}
+
+.auth-btn:hover{
+opacity:0.9;
+}
+
+.auth-link{
+margin-top:10px;
+font-size:13px;
+}
+
+.auth-link a{
+color:#6366f1;
+cursor:pointer;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* =====================================================
+ADMIN PANEL
+===================================================== */
+
+.admin-container{
+padding:20px;
+}
+
+.admin-card{
+
+background:white;
+
+border-radius:16px;
+
+padding:20px;
+
+margin-top:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+/* =====================================================
+BOTTOM NAVIGATION
+===================================================== */
+
+.bottom-nav{
+
+position:fixed;
+bottom:0;
+left:0;
+
+width:100%;
+height:75px;
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+background:rgba(12,20,35,0.95);
+
+backdrop-filter:blur(20px);
+
+border-top:1px solid rgba(255,255,255,0.08);
+
+padding-bottom:8px;
+
+z-index:9999;
+
+transition:transform .35s cubic-bezier(.4,0,.2,1);
+
+}
+
+/* hidden state */
+
+.bottom-nav.hide{
+
+transform:translateY(100%);
+
+}
+
+.nav-item{
+
+flex:1;
+
+display:flex;
+flex-direction:column;
+
+align-items:center;
+justify-content:center;
+
+font-size:12px;
+
+color:#cbd5f5;
+
+background:none;
+border:none;
+
+cursor:pointer;
+
+}
+
+.nav-item span{
+font-size:11px;
+}
+
+.nav-item.active{
+
+color:white;
+
+}
+
+.nav-item.active .nav-icon{
+
+transform:scale(1.1);
+
+}
+.nav-icon{
+
+width:24px;
+height:24px;
+
+stroke-width:1.8;
+
+stroke-linecap:round;
+stroke-linejoin:round;
+
+margin-bottom:3px;
+
+opacity:.85;
+
+transition:.25s;
+
+}
+
+.nav-item.active .nav-icon{
+opacity:1;
+transform:scale(1.1);
+}
+
+/* =====================================================
+UTILITIES
+===================================================== */
+
+.hidden{
+display:none;
+}
+
+/* =====================================================
+LOGOUT BUTTON
+===================================================== */
+
+.logout-btn{
+
+width:90%;
+
+margin:20px auto;
+
+display:block;
+
+padding:14px;
+
+border:none;
+
+border-radius:16px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.25);
+
+transition:0.2s;
+
+}
+
+.logout-btn:active{
+transform:scale(0.95);
+}
+
+.logout-btn:hover{
+background:#dc2626;
+}
+
+/* =====================================================
+CHAT HISTORY
+===================================================== */
+
+.history-title{
+
+display:flex;
+align-items:center;
+
+gap:10px;
+
+margin:20px;
+
+font-size:20px;
+font-weight:700;
+
+}
+
+.history-icon{
+
+width:20px;
+height:20px;
+
+stroke:#0f172a;
+stroke-width:2;
+
+}
+
+body.dark .history-icon{
+stroke:#e2f5ef;
+}
+
+.history-container{
+
+width:90%;
+margin:20px auto;
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+
+.history-item{
+
+background:linear-gradient(135deg,#fde68a,#facc15);
+
+padding:16px;
+
+border-radius:16px;
+
+margin:12px 20px;
+
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+
+}
+
+.history-emotion{
+
+font-weight:600;
+
+margin-bottom:4px;
+
+}
+
+.breathing-orb{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:radial-gradient(circle at 30% 30%,#7dd3fc,#0ea5e9);
+
+box-shadow:
+0 0 40px rgba(56,189,248,0.6),
+0 0 80px rgba(56,189,248,0.3),
+inset 0 0 20px rgba(255,255,255,0.3);
+
+transition:transform 4s ease-in-out, box-shadow 4s ease;
+
+}
+
+/* ==============================
+CHAT HISTORY
+============================== */
+
+/* HISTORY HEADER */
+
+.history-header{
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:20px 20px 10px 20px;
+
+font-size:22px;
+font-weight:600;
+color:#ffffff;
+}
+
+.history-icon{
+
+width:22px;
+height:22px;
+
+stroke:#facc15;
+
+}
+
+/* history list container */
+
+.history-container{
+
+padding-bottom:100px;
+
+}
+
+/* HISTORY ACTIONS */
+
+.history-actions{
+
+padding:0 20px 20px 20px;
+
+}
+
+/* DELETE BUTTON */
+
+.delete-history-btn{
+
+display:flex;
+align-items:center;
+
+gap:8px;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:10px 16px;
+
+border-radius:10px;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+/* HOVER */
+
+.delete-history-btn:hover{
+
+background:#dc2626;
+
+}
+
+/* ICON */
+
+.delete-icon{
+
+width:18px;
+height:18px;
+
+stroke:white;
+
+}
+
+/* history card */
+
+/* ==========================================
+   CHAT HISTORY CARDS
+========================================== */
+
+.history-container{
+width:90%;
+margin:auto;
+margin-top:15px;
+}
+
+.history-item{
+
+padding:18px;
+
+border-radius:16px;
+
+margin-bottom:14px;
+
+transition:0.3s;
+
+}
+
+/* LIGHT MODE */
+
+body:not(.dark) .history-item{
+
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+/* DARK MODE */
+
+body.dark .history-item{
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+}
+
+.history-item:hover{
+transform:translateY(-2px);
+}
+
+.history-emotion{
+
+font-weight:600;
+
+color:#16a34a;
+
+margin-bottom:4px;
+
+text-transform:capitalize;
+
+}
+
+body.dark .history-emotion{
+
+color:#34d399;
+
+}
+.history-text{
+
+font-size:14px;
+
+color:#374151;
+
+line-height:1.5;
+
+}
+
+/* back button */
+
+
+.history-actions{
+text-align:right;
+width:90%;
+margin:auto;
+margin-top:10px;
+}
+
+.delete-history-btn{
+
+padding:8px 16px;
+
+border:none;
+
+border-radius:10px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:13px;
+
+cursor:pointer;
+
+box-shadow:0 5px 12px rgba(0,0,0,0.15);
+
+}
+
+body.dark .delete-history-btn{
+
+background:#dc2626;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+
+}
+
+body.dark .delete-history-btn:hover{
+
+background:#b91c1c;
+
+}
+
+.delete-history-btn:hover{
+background:#dc2626;
+}
+
+/* ==========================================
+   AUTH PAGES (LOGIN + REGISTER)
+========================================== */
+
+.auth-wrapper{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:20px;
+
+}
+
+/* CARD */
+
+.auth-card{
+
+width:100%;
+max-width:340px;
+
+background:white;
+
+border-radius:26px;
+
+padding:34px;
+
+text-align:center;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.18);
+
+animation:fadeUp .6s ease;
+
+}
+
+/* TITLE */
+
+.auth-title{
+
+font-size:26px;
+
+font-weight:700;
+
+margin-bottom:6px;
+
+color:#0f172a;
+
+}
+
+.auth-subtitle{
+
+font-size:14px;
+
+color:#64748b;
+
+margin-bottom:22px;
+
+}
+
+/* INPUT */
+
+.auth-card input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:12px;
+
+border-radius:14px;
+
+border:none;
+
+background:#f1f5f9;
+
+font-size:14px;
+
+outline:none;
+
+transition:0.2s;
+
+}
+
+.auth-card input:focus{
+
+background:white;
+
+box-shadow:
+0 0 0 2px #6366f1;
+
+}
+
+/* BUTTON */
+
+.auth-btn{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:16px;
+
+font-size:15px;
+
+font-weight:600;
+
+color:white;
+
+cursor:pointer;
+
+background:linear-gradient(
+135deg,
+#38bdf8,
+#6366f1
+);
+
+margin-top:6px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.2);
+
+transition:.2s;
+
+}
+
+.auth-btn:hover{
+transform:translateY(-2px);
+}
+
+/* LINK */
+
+.auth-link{
+
+margin-top:14px;
+
+font-size:13px;
+
+color:#64748b;
+
+}
+
+.auth-link a{
+
+color:#6366f1;
+
+font-weight:500;
+
+cursor:pointer;
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* HOME LAYOUT */
+
+.main-title{
+text-align:center;
+font-size:26px;
+font-weight:700;
+margin-top:10px;
+margin-bottom:20px;
+}
+
+/* INPUT */
+
+.problem-input{
+
+width:90%;
+margin:auto;
+display:block;
+
+padding:16px;
+
+height:120px;
+
+border-radius:20px;
+
+border:none;
+
+background:rgba(255,255,255,0.8);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+font-size:15px;
+
+outline:none;
+resize:none;
+
+}
+
+/* RESULT CARD */
+
+.result-card{
+
+width:90%;
+margin:20px auto;
+
+padding:18px;
+
+border-radius:18px;
+
+background:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
+text-align:center;
+
+}
+
+.emotion-label{
+
+font-size:13px;
+color:#6b7280;
+
+}
+
+.emotion-value{
+
+font-size:20px;
+font-weight:700;
+
+color:#16a34a;
+
+margin-top:4px;
+
+}
+
+/* MEDITATION CARD */
+
+.meditation-card{
+
+width:90%;
+margin:20px auto;
+
+padding:20px;
+
+border-radius:22px;
+
+background:white;
+
+box-shadow:0 12px 35px rgba(0,0,0,0.15);
+
+line-height:1.6;
+
+font-size:14px;
+
+}
+
+/* BREATHING CARD */
+
+.breathing-card{
+
+width:90%;
+margin:20px auto;
+
+padding:25px;
+
+border-radius:22px;
+
+background:white;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
+text-align:center;
+
+}
+
+/* CARD TITLE */
+
+.card-title{
+
+font-weight:700;
+font-size:16px;
+
+margin-bottom:10px;
+
+color:#111827;
+
+}
+
+.back-btn{
+
+display:block;
+margin:15px auto;
+
+padding:12px 30px;
+
+border:none;
+border-radius:14px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:15px;
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:.2s;
+
+}
+
+.back-btn:hover{
+background:#dc2626;
+}
+
+.back-btn:active{
+transform:scale(.95);
+}
+
+/* =============================
+   SPLASH SCREEN
+============================= */
+
+
+#splash{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+/* background matching your logo */
+
+background:#F0EFEA;
+
+z-index:9999;
+
+transition:opacity .8s ease;
+
+}
+
+/* BIG CENTERED LOGO */
+
+#splashLogo{
+
+width:85%;
+max-width:500px;
+
+object-fit:contain;
+
+/* smooth breathing animation */
+
+animation:logoBreath 4s ease-in-out infinite;
+
+}
+
+/* calm breathing animation */
+
+@keyframes logoBreath{
+
+0%{
+transform:scale(0.95);
+}
+
+50%{
+transform:scale(1.02);
+}
+
+100%{
+transform:scale(0.95);
+}
+
+}
+
+/* HOME PAGE */
+
+.home-title{
+
+text-align:center;
+font-size:32px;
+font-weight:700;
+margin-top:30px;
+
+color:#0f172a;
+
+}
+
+body.dark .home-title{
+color:#e6fffb;
+}
+
+.home-subtitle{
+
+text-align:center;
+font-size:15px;
+margin-top:8px;
+
+color:#475569;
+
+}
+
+body.dark .home-subtitle{
+color:#cbd5f5;
+}
+
+/* INPUT */
+
+.emotion-input{
+
+width:85%;
+
+margin:25px auto;
+
+display:block;
+
+height:120px;
+
+padding:18px;
+
+border-radius:20px;
+
+border:none;
+
+background:rgba(255,255,255,0.6);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
+font-size:15px;
+
+resize:none;
+
+outline:none;
+
+}
+
+/* BUTTON */
+
+.calm-button{
+
+display:block;
+
+margin:25px auto;
+
+padding:14px 34px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:16px;
+
+font-weight:600;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#4facfe,
+#6366f1
+);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.25);
+
+cursor:pointer;
+
+transition:all .25s ease;
+
+}
+
+.calm-button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.3);
+
+}
+
+.calm-button:active{
+
+transform:scale(.95);
+
+}
+
+/* AMBIENT ORB */
+
+.ambient-orb{
+
+position:absolute;
+
+width:280px;
+height:280px;
+
+border-radius:50%;
+
+background:radial-gradient(
+circle,
+rgba(99,102,241,0.25),
+transparent 70%
+);
+
+filter:blur(60px);
+
+top:55%;
+left:50%;
+
+transform:translateX(-50%);
+
+animation:orbFloat 10s ease-in-out infinite;
+
+z-index:-1;
+
+}
+
+@keyframes orbFloat{
+
+0%{transform:translate(-50%,0);}
+50%{transform:translate(-50%,-20px);}
+100%{transform:translate(-50%,0);}
+
+}
+
+body.dark .emotion-input{
+
+background:rgba(255,255,255,0.08);
+
+color:#e6fffb;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+}
+
+/* CHAT HISTORY HEADER */
+
+/* HISTORY HEADER */
+
+.history-header{
+display:flex;
+align-items:center;
+gap:12px;
+padding:20px;
+}
+
+.history-header h2{
+margin:0;
+font-size:22px;
+font-weight:600;
+color:#1f2937;
+}
+
+.back-btn{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:40px;
+height:40px;
+
+border:none;
+border-radius:50%;
+
+background:#ef4444;
+
+cursor:pointer;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+transition:0.2s;
+}
+
+.back-btn:hover{
+background:#dc2626;
+}
+
+.back-btn svg{
+width:22px;
+height:22px;
+
+stroke:white;
+stroke-width:3;
+fill:none;
+
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+
+/* SVG ICON */
+
+/* ICON */
+
+.history-icon{
+
+width:22px;
+height:22px;
+
+stroke:#475569;
+
+flex-shrink:0;
+
+}
+
+
+
+/* PAGE HEADER */
+
+.page-header{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-size:20px;
+font-weight:600;
+
+margin-bottom:20px;
+
+color:#1f2937;
+
+}
+
+/* MODAL OVERLAY */
+
+.modal{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.4);
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+z-index:1000;
+
+}
+
+/* HIDDEN */
+
+.hidden{
+
+display:none;
+
+}
+
+/* MODAL BOX */
+
+.modal-content{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+width:80%;
+max-width:320px;
+
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
+}
+
+/* DARK MODE MODAL */
+
+body.dark .modal-content{
+
+background:#1f2937;
+
+color:#e5e7eb;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.7);
+
+}
+
+body.dark .modal-content h3{
+
+color:#f9fafb;
+
+}
+
+body.dark .modal-content p{
+
+color:#9ca3af;
+
+}
+
+/* ACTION BUTTONS */
+
+.modal-actions{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:20px;
+
+}
+
+/* CANCEL BUTTON */
+
+.cancel-btn{
+
+background:#e5e7eb;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+body.dark .cancel-btn{
+
+background:#374151;
+
+color:#e5e7eb;
+
+}
+
+/* MUSIC PLAYER */
+
+/* MUSIC HEADER */
+
+.music-header{
+
+display:flex;
+align-items:center;
+
+gap:8px;
+
+font-size:20px;
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+/* MUSIC CARD */
+
+.music-card{
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(12px);
+
+padding:20px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
+}
+
+/* NOW PLAYING */
+
+.now-playing{
+
+text-align:center;
+
+background:rgba(255,255,255,0.08);
+
+padding:12px;
+
+border-radius:12px;
+
+margin-bottom:15px;
+
+}
+
+/* PROGRESS BAR */
+
+.progress-container{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:20px;
+
+}
+
+#progressBar{
+
+flex:1;
+
+}
+
+/* PLAYER CONTROLS */
+
+.player-controls{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:20px;
+
+}
+
+/* PLAY BUTTON */
+
+.play-btn{
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#60a5fa,#6366f1);
+
+border:none;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+}
+
+.play-btn svg{
+
+width:30px;
+height:30px;
+
+color:white;
+
+}
+
+/* TRACK LIST */
+
+.track-list{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.track-list li{
+
+background:#facc15;
+
+padding:12px;
+
+border-radius:12px;
+
+margin-bottom:10px;
+
+cursor:pointer;
+
+text-align:center;
+
+font-weight:500;
+
+transition:0.2s;
+
+}
+
+.track-list li:hover{
+
+transform:scale(1.03);
+
+}
+
+body.dark .track-list li{
+
+background:#eab308;
+
+color:#111827;
+
+}
+
+body.dark .music-card{
+
+background:rgba(255,255,255,0.05);
+
+}
+
+/* DELETE BUTTON */
+
+.confirm-delete-btn{
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+.settings-btn svg{
+
+stroke:#1f2937;
+
+}
+
+body.dark .history-header span{
+
+color:#e5e7eb;
+
+}
+
+body.dark .history-icon{
+
+stroke:#9ca3af;
+
+}
+
+/* ==========================================
+   MUSIC PLAYER UI FIX
+========================================== */
+
+.music-player{
+
+width:92%;
+max-width:420px;
+
+margin:25px auto 120px auto;
+
+padding:28px;
+
+border-radius:28px;
+
+background:var(--card);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,0.18);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+/* header */
+
+.player-header{
+
+display:flex;
+align-items:center;
+
+gap:10px;
+
+font-size:18px;
+font-weight:600;
+
+margin-bottom:18px;
+
+}
+
+.music-icon{
+
+width:22px;
+height:22px;
+
+fill:var(--icon);
+
+}
+
+/* progress */
+
+.progress-wrapper{
+
+width:100%;
+
+display:flex;
+align-items:center;
+
+gap:10px;
+
+margin-bottom:22px;
+
+}
+
+#progressBar{
+
+flex:1;
+
+accent-color:#6366f1;
+
+}
+
+/* controls */
+
+.player-controls{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:40px;
+
+margin-bottom:25px;
+
+}
+
+/* play button */
+
+.play-main{
+
+width:72px;
+height:72px;
+
+border-radius:50%;
+
+border:none;
+
+background:linear-gradient(
+135deg,
+#5a6cff,
+#7a6cff
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,0.25);
+
+transition:0.2s;
+
+}
+
+.play-main:active{
+transform:scale(.92);
+}
+
+.play-main svg{
+
+width:30px;
+height:30px;
+
+fill:white;
+
+}
+
+/* loop button */
+
+.icon-btn{
+
+background:none;
+border:none;
+
+cursor:pointer;
+
+}
+
+.icon-btn svg{
+
+width:26px;
+height:26px;
+
+fill:var(--icon);
+
+}
+
+/* track list */
+
+.track-list{
+
+width:100%;
+
+list-style:none;
+
+padding:0;
+
+}
+
+.track-list li{
+
+padding:16px;
+
+border-radius:18px;
+
+margin-bottom:12px;
+
+background:var(--track);
+
+font-weight:600;
+
+text-align:center;
+
+cursor:pointer;
+
+transition:.2s;
+
+box-shadow:
+0 6px 16px rgba(0,0,0,0.18);
+
+}
+
+.track-list li:hover{
+transform:scale(1.03);
+}
+
+/* IOS STYLE TITLE */
+
+.music-title{
+
+font-size:24px;
+font-weight:600;
+
+letter-spacing:-0.3px;
+
+margin:20px;
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI";
+
+}
+
+.music-title svg{
+
+width:22px;
+height:22px;
+
+stroke:var(--icon);
+stroke-width:2;
+
+}
+.music-player{
+
+width:92%;
+max-width:420px;
+
+margin:20px auto 120px auto;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,0.18);
+
+backdrop-filter:blur(30px);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.25);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+body.dark .music-player{
+
+background:rgba(20,25,30,0.5);
+
+}
+
+#progressBar{
+
+flex:1;
+
+height:5px;
+
+border-radius:5px;
+
+background:#e5e7eb;
+
+accent-color:#2563eb;
+
+}
+
+body.dark #progressBar{
+
+background:#374151;
+
+}
+
+.play-main{
+
+width:64px;
+height:64px;
+
+border-radius:50%;
+
+border:none;
+
+background:#2563eb;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+box-shadow:
+0 12px 25px rgba(37,99,235,0.35);
+
+transition:0.2s;
+
+}
+
+.play-main:hover{
+
+transform:scale(1.08);
+
+}
+
+.play-main svg{
+
+width:26px;
+height:26px;
+
+fill:white;
+
+}
+
+/* DARK MODE BACKGROUND IMPROVEMENT */
+
+body.dark{
+
+background:linear-gradient(
+180deg,
+#021312 0%,
+#052d2a 40%,
+#063f3b 100%
+);
+
+}
+
+/* DARK MODE TEXT */
+
+body.dark .home-title{
+color:#f1f5f9;
+}
+
+body.dark .home-subtitle{
+color:#94a3b8;
+}
+
+body.dark .emotion-input{
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.08);
+
+color:#e6fffb;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.5);
+
+}
+
+body.dark .result-card{
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 15px 35px rgba(0,0,0,0.6);
+
+color:#e5e7eb;
+
+}
+
+body.dark .meditation-card{
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.65);
+
+color:#e5e7eb;
+
+}
+
+body.dark .calm-button{
+
+background:linear-gradient(
+135deg,
+#3b82f6,
+#6366f1
+);
+
+box-shadow:
+0 10px 30px rgba(59,130,246,0.45);
+
+}
+
+/* DARK MODE - BREATHING CARD */
+
+body.dark .breathing-card{
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 20px 45px rgba(0,0,0,0.7);
+
+color:#e5e7eb;
+
+}
+
+body.dark .breathing-card .card-title{
+
+color:#e5e7eb;
+
+}
+
+body.dark #breathingText{
+
+color:#86efac;
+
+opacity:0.9;
+
+}
+
+body.dark .breathing-orb{
+
+background:radial-gradient(circle at 30% 30%,#38bdf8,#0284c7);
+
+box-shadow:
+0 0 60px rgba(56,189,248,0.7),
+0 0 120px rgba(56,189,248,0.4),
+inset 0 0 25px rgba(255,255,255,0.2);
+
+}
+
+body.dark .primary-btn,
+body.dark .calm-button{
+
+background:linear-gradient(
+135deg,
+#3b82f6,
+#6366f1
+);
+
+box-shadow:
+0 10px 35px rgba(59,130,246,0.45);
+
+}
+body.dark .back-btn{
+
+background:#dc2626;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.6);
+
+}
+
+/* ================================
+ACCOUNT PAGE (IOS STYLE)
+================================ */
+/* ACCOUNT PAGE LAYOUT */
+
+.account-container{
+
+display:flex;
+justify-content:center;
+
+padding:40px 20px 120px;
+
+}
+
+.account-card{
+
+width:100%;
+max-width:380px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:28px;
+
+padding:28px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.35);
+
+}
+
+.account-title{
+
+font-size:22px;
+font-weight:600;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+.account-label{
+
+font-size:13px;
+
+color:#94a3b8;
+
+margin-bottom:6px;
+
+display:block;
+
+}
+
+.account-input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.1);
+
+background:rgba(255,255,255,0.08);
+
+color:white;
+
+outline:none;
+
+font-size:14px;
+
+}
+
+/* ACCOUNT INPUT PREMIUM STYLE */
+
+.account-input{
+
+width:100%;
+
+padding:14px 16px;
+
+margin-bottom:20px;
+
+border-radius:14px;
+
+border:none;
+
+/* WHITE CARD INPUT */
+background:#ffffff;
+
+color:#111827;
+
+font-size:14px;
+
+/* premium shadow */
+
+box-shadow:
+0 4px 10px rgba(0,0,0,0.08),
+inset 0 1px 2px rgba(0,0,0,0.06);
+
+outline:none;
+
+transition:all .2s ease;
+
+}
+
+/* focus effect */
+
+.account-input:focus{
+
+box-shadow:
+0 0 0 2px #6366f1,
+0 4px 12px rgba(0,0,0,0.12);
+
+}
+
+/* MUSIC TITLE CARD */
+
+.music-now-card{
+
+background:rgba(255,255,255,0.4);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+padding:18px;
+
+margin-bottom:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+text-align:center;
+
+}
+
+/* MUSIC TRACK TEXT */
+
+.now-track{
+
+font-weight:600;
+
+margin-bottom:12px;
+
+}
+
+/* CONTROLS CARD */
+
+.music-controls-card{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:40px;
+
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+padding:18px;
+
+margin-bottom:20px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+}
+
+/* LOOP BUTTON */
+
+.icon-btn{
+
+background:none;
+
+border:none;
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+/* TRACK LIST CARD STYLE */
+
+.track-list li{
+
+background:rgba(255,255,255,0.55);
+
+border-radius:18px;
+
+padding:14px;
+
+margin-bottom:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+transition:0.2s;
+
+}
+
+.track-list li:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* ===== MUSIC PLAYER PREMIUM CARDS ===== */
+
+/* Now Playing Card */
+
+.player-header,
+.progress-wrapper{
+
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(12px);
+
+padding:16px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+margin-bottom:14px;
+
+}
+
+/* Controls Card */
+
+.player-controls{
+
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(12px);
+
+border-radius:18px;
+
+padding:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+margin-bottom:18px;
+
+}
+
+/* Track list card */
+
+.track-list{
+
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(12px);
+
+border-radius:18px;
+
+padding:14px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+/* Track buttons */
+
+.track-list li{
+
+background:white;
+
+border-radius:16px;
+
+padding:14px;
+
+margin-bottom:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.12);
+
+transition:.2s;
+
+}
+
+.track-list li:hover{
+transform:translateY(-2px);
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-150px;
+left:-200px;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(
+circle,
+rgba(56,189,248,0.35),
+transparent 70%
+);
+
+filter:blur(120px);
+
+z-index:-1;
+
+}
+
+.settings-card{
+
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(10px);
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+bottom:-200px;
+right:-150px;
+
+width:500px;
+height:500px;
+
+background:radial-gradient(
+circle,
+rgba(34,197,94,0.25),
+transparent 70%
+);
+
+filter:blur(120px);
+
+z-index:-1;
+
+}
+
+/* ADMIN PANEL */
+
+.admin-title{
+
+text-align:center;
+font-size:26px;
+font-weight:700;
+margin:20px 0;
+
+}
+
+/* glass card */
+
+.admin-card{
+
+width:90%;
+margin:20px auto;
+padding:20px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(15px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+body.dark .admin-card{
+
+background:rgba(255,255,255,0.08);
+
+}
+
+/* stats */
+
+.stats-grid{
+
+display:flex;
+gap:15px;
+margin:15px 0;
+
+}
+
+.stat-box{
+
+flex:1;
+padding:15px;
+
+border-radius:16px;
+
+background:white;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+
+text-align:center;
+
+}
+
+body.dark .stat-box{
+
+background:#1e293b;
+
+}
+
+/* table */
+
+.admin-table{
+
+width:100%;
+border-collapse:collapse;
+margin:15px 0;
+
+}
+
+.admin-table th{
+
+text-align:left;
+padding:10px;
+font-size:13px;
+opacity:.7;
+
+}
+
+.admin-table td{
+
+padding:12px;
+border-top:1px solid rgba(0,0,0,0.1);
+
+}
+
+/* buttons */
+
+.admin-btn{
+
+padding:10px 18px;
+border:none;
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+#38bdf8,
+#6366f1
+);
+
+color:white;
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+
+}
+
+.admin-btn:hover{
+opacity:0.9;
+}
+
+/* ===============================
+   ADMIN PANEL PREMIUM UI
+=============================== */
+
+.admin-title{
+
+text-align:center;
+font-size:28px;
+font-weight:700;
+margin:25px 0;
+
+}
+
+/* ADMIN CARDS */
+
+.admin-card{
+
+width:90%;
+margin:20px auto;
+padding:22px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 12px 30px rgba(0,0,0,0.18);
+
+transition:0.2s;
+
+}
+
+.admin-card:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* STATS GRID */
+
+.stats-grid{
+
+display:flex;
+gap:15px;
+margin-top:15px;
+
+}
+
+.stat-box{
+
+flex:1;
+
+padding:16px;
+
+border-radius:14px;
+
+background:white;
+
+box-shadow:
+0 6px 18px rgba(0,0,0,0.15);
+
+text-align:center;
+
+}
+
+.stat-box h4{
+margin-bottom:6px;
+}
+
+/* TABLE */
+
+.admin-table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+
+}
+
+.admin-table th{
+
+text-align:left;
+padding:10px;
+
+font-size:13px;
+opacity:0.7;
+
+}
+
+.admin-table td{
+
+padding:12px;
+border-top:1px solid rgba(0,0,0,0.1);
+
+}
+
+/* BUTTON */
+
+.admin-btn{
+
+margin-top:15px;
+
+padding:10px 18px;
+
+border:none;
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+#38bdf8,
+#6366f1
+);
+
+color:white;
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:
+0 6px 18px rgba(0,0,0,0.2);
+
+transition:0.2s;
+
+}
+
+.admin-btn:hover{
+
+transform:scale(1.03);
+
+}
+
+/* DARK MODE */
+
+body.dark .admin-card{
+
+background:rgba(255,255,255,0.08);
+
+}
+
+body.dark .stat-box{
+
+background:#1e293b;
+color:white;
+
+}
+
+body.dark .admin-table td{
+
+border-top:1px solid rgba(255,255,255,0.1);
+
+}
+
+.admin-title{
+text-align:center;
+font-size:28px;
+font-weight:700;
+margin:20px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:15px;
+}
+
+.stat-box{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stat-box h4{
+font-size:14px;
+color:#6b7280;
+}
+
+.stat-box p{
+font-size:22px;
+font-weight:700;
+margin-top:5px;
+}
+
+.admin-table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+.admin-table th,
+.admin-table td{
+padding:10px;
+text-align:left;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.admin-btn{
+margin-top:15px;
+padding:10px 16px;
+border:none;
+border-radius:10px;
+background:#4F7CFF;
+color:white;
+cursor:pointer;
+}
+
+/* ================================
+ADMIN DASHBOARD (IOS STYLE)
+================================ */
+
+.admin-header{
+padding:25px;
+text-align:center;
+font-size:22px;
+font-weight:600;
+}
+
+.dashboard{
+width:90%;
+max-width:1000px;
+margin:auto;
+padding-bottom:120px;
+}
+
+/* STAT CARDS */
+
+.stats-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:25px;
+}
+
+.stat-card{
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(20px);
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.stat-label{
+font-size:14px;
+opacity:0.7;
+}
+
+.stat-card h2{
+font-size:32px;
+margin-top:8px;
+}
+
+/* MAIN CARDS */
+
+.card{
+background:rgba(255,255,255,0.85);
+border-radius:20px;
+padding:20px;
+margin-bottom:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+backdrop-filter:blur(20px);
+}
+
+.card-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.card-header h2{
+font-size:18px;
+font-weight:600;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+text-align:left;
+font-weight:600;
+font-size:14px;
+padding:12px;
+opacity:0.7;
+}
+
+td{
+padding:12px;
+border-top:1px solid rgba(0,0,0,0.06);
+font-size:14px;
+}
+
+/* BUTTONS */
+
+.primary-btn{
+background:#007aff;
+border:none;
+color:white;
+padding:8px 14px;
+border-radius:10px;
+font-size:13px;
+cursor:pointer;
+}
+
+.primary-btn:hover{
+opacity:0.9;
+}
+
+/* DANGER SECTION */
+
+.card.danger{
+border-left:4px solid #ff3b30;
+}
+
+.card.danger h2{
+color:#ff3b30;
+}
+
+/* DARK MODE */
+
+body.dark .stat-card,
+body.dark .card{
+background:rgba(30,30,35,0.8);
+color:#f3f3f3;
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+body.dark th{
+opacity:0.8;
+}
+
+body.dark td{
+border-color:rgba(255,255,255,0.05);
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+background:#ff3b30;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:8px;
+font-size:13px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.delete-btn:hover{
+background:#d9342b;
+transform:scale(1.05);
+}
+
+.delete-btn:active{
+transform:scale(0.95);
+}
+
+.logout-btn{
+background:linear-gradient(90deg,#ff3b30,#ff2d55);
+color:white;
+border:none;
+padding:12px;
+border-radius:14px;
+font-weight:600;
+width:100%;
+box-shadow:0 8px 20px rgba(255,59,48,0.4);
+}
+
+/* =========================================
+DARK MODE FIX
+========================================= */
+
+body.dark {
+    background: linear-gradient(180deg,#081a2b,#031018);
+    color: #ffffff;
+}
+
+/* Titles */
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: #ffffff;
+}
+
+/* Music title */
+body.dark .music-title {
+    color: #ffffff;
+}
+
+/* Cards */
+body.dark .music-card,
+body.dark .player-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Track buttons */
+body.dark .track-btn {
+    background: linear-gradient(135deg,#ffc107,#ff9800);
+    color: #000;
+}
+
+/* Player text */
+body.dark #currentTrack {
+    color: #ffffff;
+}
+
+/* Bottom navigation */
+body.dark .bottom-nav {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(15px);
+}
+
+.track-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg,#ffd54f,#ffb300);
+    font-weight:600;
+    font-size:16px;
+    margin:10px 0;
+    transition:all 0.25s ease;
+}
+
+.track-btn:hover{
+    transform:scale(1.04);
+}
+
+.player-card{
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border-radius:24px;
+    padding:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.play-main{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#4f7cff,#2a55ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+DARK MODE TEXT FIX - HISTORY CARDS
+===================================================== */
+
+/* History emotion badges - bright green/white */
+body.dark .history-emotion {
+    color: #34d399 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* History text content - light gray */
+body.dark .history-text {
+    color: #e5e7eb !important;
+    opacity: 0.95;
+}
+
+/* History cards background - better contrast */
+body.dark .history-item {
+    background: rgba(255,255,255,0.12) !important;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+}
+
+/* History header icons/text */
+body.dark .history-header,
+body.dark .history-header span {
+    color: #f9fafb !important;
+}
+
+body.dark .history-icon {
+    stroke: #e5e7eb !important;
+}
+
+/* History container */
+body.dark .history-container {
+    background: transparent;
+}
+
+/* Clear history button - better dark contrast */
+body.dark .delete-history-btn {
+    background: #dc2626 !important;
+    color: white !important;
+}
+
+body.dark .delete-history-btn:hover {
+    background: #b91c1c !important;
+}
+
+/* Container card that holds the recommendation text */
+.recommendation-card {
+    border-radius: 22px;
+    padding: 18px 20px 22px;
+    margin: 12px 16px 24px;
+    backdrop-filter: blur(26px);
+}
+
+/* Light mode card */
+body:not(.dark) .recommendation-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(243,246,255,0.92));
+    box-shadow: 0 18px 45px rgba(15,23,42,0.20);
+}
+
+/* Dark mode card */
+body.dark .recommendation-card {
+    background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(15,23,42,0.85));
+    box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+}
+
+/* Header row with icon + title */
+.meditation-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: none;
+}
+
+/* Light mode heading text */
+body:not(.dark) .meditation-header span {
+    color: #0f172a;
+}
+
+/* Dark mode heading text */
+body.dark .meditation-header span {
+    color: #e5f4ff;
+}
+
+/* Icon base */
+.meditation-icon {
+    width: 20px;
+    height: 20px;
+    stroke: none;
+    fill-rule: evenodd;
+}
+
+/* Light mode icon color */
+body:not(.dark) .meditation-icon {
+    fill: #22c55e;
+}
+
+/* Dark mode icon color */
+body.dark .meditation-icon {
+    fill: #4ade80;
+}
+/* Base card layout */
+.recommendation-card {
+    border-radius: 22px;
+    padding: 18px 20px 22px;
+    margin: 12px 16px 24px;
+    backdrop-filter: blur(26px);
+}
+
+/* LIGHT MODE – soft warm yellow */
+body:not(.dark) .recommendation-card {
+    background: linear-gradient(135deg, #ffe89c, #ffd54a);
+    box-shadow: 0 18px 45px rgba(15,23,42,0.20);
+}
+
+/* DARK MODE – deeper golden card */
+body.dark .recommendation-card {
+    background: linear-gradient(135deg, #facc15, #eab308);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+}
+
+/* Header row with icon + title (unchanged) */
+.meditation-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* Heading text colors */
+body:not(.dark) .meditation-header span {
+    color: #111827;
+}
+
+body.dark .meditation-header span {
+    color: #111827;
+}
+
+/* Icon color on yellow */
+.meditation-icon {
+    width: 20px;
+    height: 20px;
+    stroke: none;
+    fill-rule: evenodd;
+}
+
+body:not(.dark) .meditation-icon,
+body.dark .meditation-icon {
+    fill: #1e293b;  /* dark navy on yellow */
+}
+
+//* Card wrapper */
+ .recommendation-card {
+     border-radius: 22px;
+     padding: 16px 18px 20px;
+     margin: 12px 16px 24px;
+     backdrop-filter: blur(26px);
+ }
+
+ /* Light card */
+ body:not(.dark) .recommendation-card {
+     background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(243,246,255,0.92));
+     box-shadow: 0 18px 45px rgba(15,23,42,0.20);
+ }
+
+ /* Dark card */
+ body.dark .recommendation-card {
+     background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(15,23,42,0.85));
+     box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+ }
+
+ /* Yellow pill label */
+ .recommendation-pill {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     padding: 8px 14px;
+     border-radius: 999px;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+     font-weight: 600;
+     font-size: 12px;
+     letter-spacing: 0;
+     margin-bottom: 10px;
+ }
+
+ /* Yellow colors both modes */
+ body:not(.dark) .recommendation-pill,
+ body.dark .recommendation-pill {
+     background: linear-gradient(135deg, #ffe89c, #facc15);
+     color: #111827;
+ }
+
+ /* Icon inside pill */
+ .recommendation-pill .meditation-icon {
+     width: 14px;
+     height: 14px;
+     fill: #111827;
+ }
+
+ /* Text inside card */
+ .recommendation-card p {
+     margin: 4px 0;
+     line-height: 1.45;
+     font-size: 0.95rem;
+     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+ }
+
+ body:not(.dark) .recommendation-card p {
+     color: #111827;
+ }
+
+ body.dark .recommendation-card p {
+     color: #e5e7eb;
+     text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+ }
+
+/* ============================
+   AI RESULT SECTION - CARD
+============================ */
+
+.ai-result-card {
+    margin: 16px 16px 24px;
+    padding: 16px 18px 18px;
+    border-radius: 24px;
+    backdrop-filter: blur(26px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Light mode card */
+body:not(.dark) .ai-result-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(241,245,255,0.95));
+    box-shadow: 0 20px 45px rgba(15,23,42,0.18);
+}
+
+/* Dark mode card */
+body.dark .ai-result-card {
+    background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.9));
+    box-shadow: 0 22px 55px rgba(0,0,0,0.85);
+}
+
+/* ============================
+   EMOTION CHIP
+============================ */
+
+.ai-emotion-chip {
+    align-self: flex-start;
+    padding: 6px 11px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Light mode emotion chip */
+body:not(.dark) .ai-emotion-chip {
+    background: rgba(15,23,42,0.04);
+}
+
+/* Dark mode emotion chip */
+body.dark .ai-emotion-chip {
+    background: rgba(15,23,42,0.85);
+}
+
+.ai-emotion-label {
+    opacity: 0.8;
+}
+
+/* Emotion value will be colored by emotion-specific classes if you want later */
+.ai-emotion-value {
+    font-weight: 600;
+}
+
+/* ============================
+   RECOMMENDATION HEADER
+============================ */
+
+.ai-reco-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Yellow pill label */
+.ai-reco-pill {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* Pill color (same both modes, tuned for contrast) */
+body:not(.dark) .ai-reco-pill,
+body.dark .ai-reco-pill {
+    background: linear-gradient(135deg, #ffe89c, #facc15);
+    color: #111827;
+}
+
+.ai-reco-icon {
+    width: 14px;
+    height: 14px;
+    fill: #111827;
+}
+
+/* Meditation title text */
+.ai-reco-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Title colors */
+body:not(.dark) .ai-reco-title {
+    color: #0f172a;
+}
+
+body.dark .ai-reco-title {
+    color: #e5e7eb;
+}
+
+/* ============================
+   BODY TEXT
+============================ */
+
+.ai-reco-body {
+    margin-top: 2px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Ensure paragraphs inside render nicely if you split by <br> or <p> later */
+.ai-reco-body p {
+    margin: 4px 0;
+}
+
+/* Body colors */
+body:not(.dark) .ai-reco-body {
+    color: #111827;
+}
+
+body.dark .ai-reco-body {
+    color: #e5e7eb;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+#history{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+}
+
+.history-container{
+    flex:1;
+    overflow-y:auto;
+}
+
+/* =========================
+ADMIN TITLE
+========================= */
+
+.admin-title{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+color:#1f2937;
+}
+
+.admin-logo{
+width:30px;
+height:30px;
+color:#4F7CFF;
+}
+
+/* =========================
+STAT CARDS IMPROVEMENT
+========================= */
+
+.stat-card{
+background:white;
+border-radius:16px;
+padding:20px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:transform .2s;
+}
+
+.stat-card:hover{
+transform:translateY(-3px);
+}
+
+.stat-label{
+font-size:14px;
+color:#6b7280;
+}
+
+.stat-card h2{
+font-size:28px;
+color:#111827;
+}
+
+/* =========================
+DELETE BUTTON
+========================= */
+
+.delete-btn{
+background:#ef4444;
+border:none;
+border-radius:8px;
+padding:6px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:all .2s;
+}
+
+.delete-btn svg{
+width:16px;
+height:16px;
+color:white;
+}
+
+.delete-btn:hover{
+background:#dc2626;
+transform:scale(1.05);
+}
+
+/* =========================
+ADMIN HEADER
+========================= */
+
+.admin-header{
+text-align:center;
+padding:20px;
+font-size:28px;
+font-weight:700;
+letter-spacing:1px;
+background:linear-gradient(135deg,#4F7CFF,#7aa2ff);
+color:white;
+border-radius:0 0 20px 20px;
+box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+CARD IMPROVEMENT
+========================= */
+
+.card{
+background:white;
+border-radius:16px;
+padding:20px;
+margin:20px 0;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+transition:transform .2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* =========================
+DELETE BUTTON
+========================= */
+
+.delete-btn{
+background:#ef4444;
+border:none;
+border-radius:8px;
+padding:6px 10px;
+cursor:pointer;
+color:white;
+font-weight:600;
+transition:all .2s;
+}
+
+.delete-btn:hover{
+background:#dc2626;
+transform:scale(1.05);
+}
+
+
+
+/* =========================================
+SCROLL SYSTEM FIX
+========================================= */
+
+html, body{
+height:100%;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+
+#app{
+height:100%;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+overscroll-behavior:contain;
+}
+
+/* Prevent horizontal scroll */
+body{
+overflow-x:hidden;
+}
+
+/* Chat history scroll */
+#history{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.history-container{
+flex:1;
+overflow-y:auto;
+padding-bottom:120px;
+}
+
+*{
+-webkit-tap-highlight-color:transparent;
+}
+
+/* =====================================================
+IOS STYLE BACK BUTTON
+===================================================== */
+.back-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:38px;
+height:38px;
+
+border:none;
+border-radius:50%;
+
+background:#ef4444;
+
+cursor:pointer;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.2s;
+}
+
+.back-btn:hover{
+background:#dc2626;
+}
+
+.back-btn svg{
+width:22px;
+height:22px;
+
+stroke:white;
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+/* DARK MODE */
+
+body.dark .back-btn{
+
+background:rgba(255,255,255,0.08);
+
+color:#e5e7eb;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+
+}
+
+/* =========================
+CHAT HISTORY HEADER
+========================= */
+
+.history-header{
+display:flex;
+align-items:center;
+gap:12px;
+padding:20px;
+}
+
+/* BACK BUTTON */
+
+.ios-back{
+
+display:flex;
+align-items:center;
+gap:6px;
+
+border:none;
+background:rgba(255,255,255,0.7);
+
+padding:8px 14px;
+
+border-radius:12px;
+
+font-size:14px;
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* ICON */
+
+.ios-back svg{
+width:18px;
+height:18px;
+
+stroke:#1f2937;
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+/* TITLE */
+
+.history-title{
+
+font-size:20px;
+font-weight:700;
+
+color:#1f2937;
+
+}
+
+/* DARK MODE */
+
+body.dark .ios-back{
+background:rgba(255,255,255,0.08);
+color:#e5e7eb;
+}
+
+body.dark .history-title{
+color:#f9fafb;
+}
+
+body{
+overflow-y:auto;
+}
+
+#app {
+
+    height:100vh;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
+
+#app{
+height:100vh;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+}
+
+.screen{
+min-height:100vh;
+}
+
+.history-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.delete-chat-btn{
+background:none;
+border:none;
+font-size:18px;
+cursor:pointer;
+color:#ff4d4d;
+}
+
+.screen{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow-y:auto;
+overflow-y:auto;
+height:100%;
+
+opacity:0;
+pointer-events:none;
+-webkit-overflow-scrolling: touch;
+
+transition:opacity 0.3s ease;
+}
+
+.screen.active{
+opacity:1;
+pointer-events:auto;
+}
+
+body{
+margin:0;
+overflow:hidden;
+}
+
+.app{
+position:relative;
+height:100vh;
+width:100%;
+}
+
+.navbar{
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+transition: transform 0.3s ease;
+z-index: 1000;
+}
+
+.page-header{
+display:flex;
+align-items:center;
+gap:10px;
+padding:20px 20px 10px 20px;
+}
+
+.page-header h2{
+font-size:22px;
+margin:0;
+}
+
+
+.clear-history{
+margin:10px 20px;
+background:#ff4d4d;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.admin-page{
+min-height:100vh;
+}
+
+.container{
+min-height:100vh;
+overflow-y:auto;
+}
+
+html,body{
+height:100%;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.music-controls{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+gap:28px;
+
+margin-top:20px;
+
+}
+
+.loop-btn{
+
+width:48px;
+height:48px;
+
+border:none;
+border-radius:14px;
+
+background:rgba(255,255,255,0.15);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+backdrop-filter:blur(12px);
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+.loop-btn svg{
+
+width:22px;
+height:22px;
+
+stroke:white;
+stroke-width:2;
+
+fill:none;
+
+}
+
+.loop-btn.active{
+
+background:#4f7cff;
+
+}
+
+.play-main{
+
+width:68px;
+height:68px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#4f7cff,#2a5cff);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+cursor:pointer;
+
+}
+
+.play-main svg{
+
+width:28px;
+height:28px;
+
+stroke:white;
+fill:white;
+
+}
+
+input[type="range"]{
+
+appearance:none;
+height:6px;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.3);
+
+}
+
+input[type="range"]::-webkit-slider-thumb{
+
+appearance:none;
+
+width:14px;
+height:14px;
+
+border-radius:50%;
+
+background:#4f7cff;
+
+cursor:pointer;
+
+}
+
+.settings-card span,
+.settings-card p{
+
+font-weight:500;
+
+}
+
+/* light */
+
+body:not(.dark) .settings-card{
+color:#1f2937;
+}
+
+/* dark */
+
+body.dark .settings-card{
+color:#e5e7eb;
+}
+
+.settings-card svg{
+width:22px;
+height:22px;
+stroke:currentColor;
+}

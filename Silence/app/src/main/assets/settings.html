@@ -1,0 +1,101 @@
+<section id="settings" class="screen">
+
+    <div class="settings-header">
+
+        <svg class="settings-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+
+            <circle cx="12" cy="12" r="3"></circle>
+
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06
+a2 2 0 1 1-2.83 2.83l-.06-.06
+a1.65 1.65 0 0 0-1.82-.33
+1.65 1.65 0 0 0-1 1.51V21
+a2 2 0 1 1-4 0v-.09
+a1.65 1.65 0 0 0-1-1.51
+1.65 1.65 0 0 0-1.82.33l-.06.06
+a2 2 0 1 1-2.83-2.83l.06-.06
+a1.65 1.65 0 0 0 .33-1.82
+1.65 1.65 0 0 0-1.51-1H3
+a2 2 0 1 1 0-4h.09
+a1.65 1.65 0 0 0 1.51-1
+1.65 1.65 0 0 0-.33-1.82l-.06-.06
+a2 2 0 1 1 2.83-2.83l.06.06
+a1.65 1.65 0 0 0 1.82.33h0
+a1.65 1.65 0 0 0 1-1.51V3
+a2 2 0 1 1 4 0v.09
+a1.65 1.65 0 0 0 1 1.51
+1.65 1.65 0 0 0 1.82-.33l.06-.06
+a2 2 0 1 1 2.83 2.83l-.06.06
+a1.65 1.65 0 0 0-.33 1.82v0
+a1.65 1.65 0 0 0 1.51 1H21
+a2 2 0 1 1 0 4h-.09
+a1.65 1.65 0 0 0-1.51 1z"></path>
+
+        </svg>
+
+        <span class="settings-title">Settings</span>
+
+    </div>
+
+    <div class="settings-card">
+
+        <button class="settings-btn" onclick="openHistory()">
+
+            <svg width="22" height="22" viewBox="0 0 24 24"
+                 stroke="#cbd5f5" stroke-width="2" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <circle cx="3" cy="6" r="1"></circle>
+                <circle cx="3" cy="12" r="1"></circle>
+                <circle cx="3" cy="18" r="1"></circle>
+
+            </svg>
+
+            Chat History
+
+        </button>
+
+        <button class="settings-btn" onclick="openAccount()">
+
+            <svg width="22" height="22" viewBox="0 0 24 24"
+                 stroke="#cbd5f5" stroke-width="2" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5.5 21a6.5 6.5 0 0113 0"></path>
+
+            </svg>
+
+            Account & Privacy
+
+        </button>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="theme-row">
+
+            <span>Light</span>
+
+            <label class="switch">
+                <input type="checkbox" onchange="toggleTheme()">
+                <span class="slider"></span>
+            </label>
+
+            <span>Dark</span>
+
+        </div>
+
+    </div>
+
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</section>

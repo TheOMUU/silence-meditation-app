@@ -1,0 +1,38 @@
+<section id="history" class="screen">
+
+    <header>Silence</header>
+
+    <div class="history-header">
+
+        <svg class="history-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+
+        <h2>Chat History</h2>
+
+    </div>
+
+    <div class="history-actions">
+
+        <button onclick="deleteHistory()">
+
+            <svg class="delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                      d="M3 6h18M8 6v12m8-12v12M10 6V4h4v2M5 6l1 14h12l1-14"/>
+
+            </svg>
+
+            <span>Clear History</span>
+
+        </button>
+
+    </div>
+
+    <div id="historyContainer" class="history-container"></div>
+
+    <button class="back-btn" onclick="changeTab('settings',2)">
+        Back
+    </button>
+
+</section>
